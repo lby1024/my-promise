@@ -1,2 +1,2 @@
 # my-promise
-Created with CodeSandbox
+手写promise
