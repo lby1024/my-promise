@@ -1,10 +1,9 @@
 type State = "pending" | "success" | "fail";
 type CB = null | undefined | ((data?: any) => any);
-type QueueItem = [CB, CB, Promise2];
 type Fn = (resolve: Promise2["resolve"], reject: Promise2["reject"]) => any;
 
 export default class Promise2 {
-  queue: QueueItem[] = [];
+  queue: [CB, CB, Promise2][] = [];
   state: State = "pending";
 
   constructor(fn: Fn) {
