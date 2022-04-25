@@ -1,5 +1,4 @@
 # my-promise
-手写promise
 
 实现
 
